@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/dist/output.css" rel="stylesheet">
+  <link href="../css/index.css" rel="stylesheet">
+</head>
+<body class="m-0 bg-lime-600 ">
+  <div id="navbar" class="navbar bg-blue-100 flex justify-between items-stretch">
+    <img src="../assets/Fox-vector-logo.svg" class="h-10 w-12 ml-6 mr-auto">
+    <img id="btn-menu" src="../assets/icons8-menu.svg" class = "h-12 w-10 p-2 box-border cursor-pointer md:hidden">
+    <ul class="md:w-[60%] md:flex-initial md:self-end md:flex md:justify-between md:items-stretch md:mr-10 md:mb-[.1em] hidden">
+      <li>Home</li>
+      <li>Technique</li>
+      <li>About</li>
+      <li>Testimonial</li>
+      <li>Socials</li>
+    </ul>
+  </div>
+  <div class="m-0 bg-blue-100">
+    <p class="text-center text-blue-950 font-bold text-2xl shadow-sm">Ceasar Cipher</p>
+    <div class="p-2 flex flex-col justify-between md:flex md:flex-row md:justify-between">
+      <p class="text-blue-950 shadow-xl text-center mb-5 md:p-10 md:self-stretch bg-blue-200 rounded-md">The wizard on the left takes input of the text you wish to cipher<br>Don't keep the Ceasar waiting lest you loose your head</p>
+      <form class = "p-2 flex flex-col justify-start bg-blue-950 rounded-lg text-blue-200 md:ml-4 md:w-[60%] md:flex md:flex-col md:flex-initial md:align-middle">
+        <label>Name: <input id="name" type="text" placeholder="name..."></input></label>
+        <label>Message: <input id="message"   type="text" placeholder="message..."></input></label>
+        <button id="button" class = "rounded-lg bg-blue-700 hover:bg-blue-400 hover:text-white w-28 self-center">SUBMIT</button>
+      </form>
+    </div>
+  </div>
+  <div>
+    <h2 class="text-center text-blue-950 font-bold text-2xl shadow-sm">About</h2>
+    <p class="">The Caesar cipher is a basic substitution cipher where each letter in a message is shifted a fixed number of positions down or up the alphabet. It's named after Julius Caesar, who used a shift of 3. While simple, it's easily cracked with modern methods. It's a starting point for understanding encryption concepts.</p>
+    <h3 class="text-center text-blue-800 underline">Steps Involved in The encryption process</h3>
+    <ul class="grid grid-rows-5 grid-cols-2 md:grid md:grid-rows-4 md:grid-cols-3">
+      <li><p><span class="hover:">1. Encryption Algorithm Selection</span>Choose a strong encryption algorithm, like AES-256, for encrypting user text. Ensure the algorithm is well-regarded and secure.</p></li>
+      <li><p><span>2. Key Generation and Management</span>Generate a unique encryption key for each user, and securely manage these keys. Never store encryption keys in the same database as the encrypted data.</p></li>
+      <li><p><span>3. Data Encryption</span>Encrypt the user's text using their unique encryption key and the chosen encryption algorithm. This encryption should occur on the client side before sending the data to the database.</p></li>
+      <li><p><span>4. Database Schema</span>Structure the database to include fields for the encrypted text and any associated metadata. For example:</p></li>
+      <li><p><span>5. Initialization Vector (IV)</span>Use a unique Initialization Vector for each encryption operation. The IV should be stored alongside the encrypted data</p></li>
+      <li><p><span>6. Access Control</span>Implement strict access controls to limit who can access the encrypted data. Enforce strong authentication and authorization mechanisms to ensure only authorized users can access the data.</p></li>
+      <li><p><span>7. Transport Encryption</span>Ensure that data transmitted between the client and the database server is encrypted using SSL/TLS to prevent interception.</p></li>
+      <li><p><span>8. Backup and Disaster Recovery</span>Develop a strategy for securely backing up and recovering the encrypted data. This strategy should also encompass the secure management of encryption keys</p></li>
+      <li><p><span>9. Auditing and Monitoring</span>Implement auditing and monitoring mechanisms to track access to the encrypted data. Detect any unauthorized access or suspicious activities.</p></li>
+      <li><p><span>10. Regular Security Reviews</span>Periodically review and update your encryption practices to stay aligned with the latest security standards and best practices.</p></li>
+    </ul>
+  </div>
+  <div>
+    <p class="">Methodology</p>
+  </div>
+  <script src="../javascript/cipher.js"></script>
+</body>
+</html>
